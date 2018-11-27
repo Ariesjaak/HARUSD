@@ -4,7 +4,7 @@
 # The provided CodeBook.md contains more information about this script.
 
 # This R script is used to load, clean, summarize data and create a final data extract. 
-# It is build up in five phases:
+# It is build up in four phases:
 #  1) Getting the data
 #  2) Cleaning the data
 #  3) Summarizing the data
