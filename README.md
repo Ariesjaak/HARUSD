@@ -9,7 +9,7 @@ In this README script the following is explained:
     2.2) Codebook: "Codebook.md"
     2.3) Tidy data: "tidydataset.txt"
 
-# The Assignment
+# 1) The Assignment
   The purpose of this project is to demonstrate the ability to collect, work with, and clean a data set.
   The goal is to prepare tidy data that can be used for later analysis. 
   
@@ -26,9 +26,9 @@ In this README script the following is explained:
   4) Appropriately labels the data set with descriptive variable names.
   5) From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject."
 
-# The Submitted Files
+# 2) The Submitted Files
 
-  ## R script: "run_analysis.R"
+  ## 2.1) R script: "run_analysis.R"
      This file contains the R script used to load, clean, summarize the data and to create the final "Tidy data" extract.
      It is build up in four phases:
        1) Getting the data
@@ -52,6 +52,6 @@ In this README script the following is explained:
         1.8) Loading specific scope: "only measurements on the mean and standard deviation"
               This covers requirement number 2 from "Required scripts"
 
-  ## Codebook: "Codebook.md"
+  ## 2.2) Codebook: "Codebook.md"
 
-  ## Tidy data: "tidydataset.txt"
+  ## 2.3) Tidy data: "tidydataset.txt"
