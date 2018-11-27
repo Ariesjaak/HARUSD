@@ -145,17 +145,38 @@ In this README script the following is explained:
         
         In this phase first descriptive names are created for all features including removing and changing characters to 
         make them easier to read.
-        Secondly these describtive names are asigned to the dataset
+        Example: "BodyBody" changed into "Body"
+        
+        Secondly these descriptive names are asigned to the dataset which also includes loading the description of the activities instead using an Activity ID.
         
         Steps:
         2.1) Create descriptive names
         2.2) Assign descriptive names
      
      3) Summarizing the data
-     
+        
+        For this step two packages are used: "tidyr" and "dplyr".
+        A "tidy" data set is created by creating a table data frame from the final data from step 2) "Cleaning data"
+        First the data is grouped by "activity" and "subject".
+        Secondly, the mean is calculated for each feature per activity and subject
+        Thirdly, the data is transposed by using the gather() function to get a dataframe with the following columns:
+          - activityID
+          - activity
+          - subject
+          - feature
+          - mean
+        Finally, all above columns, except "activityID" are "selected" by using the select() function
      
      4) Creating tidy data set
-
+        
+        In this final step the "tidy" data from step 3) "Summarizing the data" is extracted into "tidydataset.txt" by using the write.table() function
+  
   ## 3.2) Codebook: "Codebook.md"
+  
+    
 
   ## 3.3) Tidy data: "tidydataset.txt"
+     This file is the result of the R script "run_analysis.R" as described above.
+     It contains the average (mean) of the features from the dataset 
+  
+  
