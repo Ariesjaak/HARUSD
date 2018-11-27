@@ -40,7 +40,8 @@ In this README script the following is explained:
     
     1) Getting the data
     
-      This phase is used to create a data repository, load the data from the provided URL, unzip the data, load the data in R, merge the data and creating the required scope for only measurements on the mean and standard deviation.
+      This phase is used to create a data repository, load the data from the provided URL, unzip the data, 
+      load the data in R, merge the data and creating the required scope for only measurements on the mean and standard deviation.
       
       To make this understandable and clear, the script is split up in 8 steps:
         1.1) Creating a data repository if not already existing
