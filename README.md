@@ -4,9 +4,9 @@ This repository is created for Coursera course "Getting and Cleaning Data" from 
 In this README script the following is explained:
   1) The Assignment
   2) The Submitted Files:
-      2.1) R script: "run_analysis.R"
-      2.2) Codebook: "Codebook.md"
-      2.3) Tidy data: "tidydataset.txt"
+    2.1) R script: "run_analysis.R"
+    2.2) Codebook: "Codebook.md"
+    2.3) Tidy data: "tidydataset.txt"
 
 # The Assignment
   The purpose of this project is to demonstrate the ability to collect, work with, and clean a data set.
@@ -34,7 +34,22 @@ In this README script the following is explained:
        2) Cleaning the data
        3) Summarizing the data
        4) Creating tidy data set
+    
+    The phases are described below:
+    
+    1) Getting the data
       
+      This phase consists of 8 steps:
+        1.1) Creating a data repository if not already existing
+        1.2) Loading the data from the provided URL and extract the file into the repository
+        1.3) Loading activity names
+        1.4) Loading feature names
+        1.5) Loading training data & labels
+        1.6) Loading test data & labels
+        1.7) Merging data
+              This covers requirement number 1 from "Required scripts" in the previously described chapter "the Assignement"
+        1.8) Loading specific scope: "only measurements on the mean and standard deviation"
+              This covers requirement number 2 from "Required scripts"
 
   ## Codebook: "Codebook.md"
 
