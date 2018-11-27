@@ -127,9 +127,16 @@ In this README script the following is explained:
         1.2) Loading the data from the provided URL and extract the file into the repository
              Data is loaded from the URL and unzipped.
         1.3) Loading activity names
+             loading the activity_labels.txt into "activitylabels by using read.table() function
         1.4) Loading feature names
+             loading features.txt into "featurelabels" by using read.table() fucntion
         1.5) Loading training data & labels
+             loading the following txt files by using read.table() function:
+             X_train.txt loaded into traindata
+             y_train.txt loaded into trainlabels
+             subject_train.txt loadded into trainsubjectID
         1.6) Loading test data & labels
+             loading the 
         1.7) Merging data
               This covers requirement number 1 from "Required scripts" in the previously described chapter "the Assignement".
               The train and testdata are merged for:
@@ -172,11 +179,10 @@ In this README script the following is explained:
         In this final step the "tidy" data from step 3) "Summarizing the data" is extracted into "tidydataset.txt" by using the write.table() function
   
   ## 3.2) Codebook: "Codebook.md"
-  
-    
+      A code book that indicates all the variables and summaries calculated, along with units, and any other relevant information
 
   ## 3.3) Tidy data: "tidydataset.txt"
      This file is the result of the R script "run_analysis.R" as described above.
-     It contains the average (mean) of the features that contain a mean or standard deviation from the "Human Activity Recognition Using Smartphones Dataset" per activity and subject.
+     It contains the average of the features that contain a mean or standard deviation from the "Human Activity Recognition Using Smartphones Dataset" per activity and subject.
   
   
