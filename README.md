@@ -2,6 +2,8 @@
 This repository is created for Coursera course "Getting and Cleaning Data" from Data Science Specialization, 
 by Johns Hopkins University.
 
+HARUSD stands for: Human Activity Recognition Using Smartphones Dataset
+
 In this README script the following is explained:
   1) The Assignment
   2) Original README
