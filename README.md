@@ -177,6 +177,6 @@ In this README script the following is explained:
 
   ## 3.3) Tidy data: "tidydataset.txt"
      This file is the result of the R script "run_analysis.R" as described above.
-     It contains the average (mean) of the features from the dataset 
+     It contains the average (mean) of the features that contain a mean or standard deviation from the "Human Activity Recognition Using Smartphones Dataset" per activity and subject.
   
   
