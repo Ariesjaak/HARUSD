@@ -119,7 +119,8 @@ In this README script the following is explained:
     1) Getting the data
     
       This phase is used to create a data repository, load the data from the provided URL, unzip the data, 
-      load the data in R, merge the data and creating the required scope for only measurements on the mean and standard deviation.
+      load the data in R, merge the data and creating the required scope for only measurements on the mean and 
+      standard deviation.
       
       To make this understandable and clear, the script is split up in 8 steps:
         1.1) Creating a data repository if not already existing
@@ -156,7 +157,8 @@ In this README script the following is explained:
               This is used to create a subset with only those features:
               
                 scopeddata <- totaldata[,colscoped] # load only the features with mean and standard deviation
-                enricheddata <- cbind(totallabels, totalsubjectID, scopeddata) #enrich this dataset with two columns for activityID and subject.
+                enricheddata <- cbind(totallabels, totalsubjectID, scopeddata) #enrich this dataset with two columns 
+                for activityID and subject.
      
      2) Cleaning the data
         
@@ -164,7 +166,11 @@ In this README script the following is explained:
         make them easier to read.
         Examples: "BodyBody" changed into "Body", removing "()"
         
-        Secondly these descriptive names are asigned to the dataset which also includes loading the description of the activities instead using an Activity ID by using the merge() function. The unique link is "activityID" and the dataset "enricheddata" is set as the base dataset by code "all.x = TRUE". It works like this, enricheddata is copied into "final" dataset plus an extra column where the "activity" is loaded from "activitylabels" dataset when the "activityID" matches. 
+        Secondly these descriptive names are asigned to the dataset which also includes loading the description of the 
+        activities instead using an Activity ID by using the merge() function. The unique link is "activityID" and the 
+        dataset "enricheddata" is set as the base dataset by code "all.x = TRUE". It works like this, enricheddata is 
+        copied into "final" dataset plus an extra column where the "activity" is loaded from "activitylabels" dataset 
+        when the "activityID" matches. 
         
         Steps:
         2.1) Create descriptive names
@@ -186,12 +192,15 @@ In this README script the following is explained:
      
      4) Creating tidy data set
         
-        In this final step the "tidy" data from step 3) "Summarizing the data" is extracted into "tidydataset.txt" by using the write.table() function
+        In this final step the "tidy" data from step 3) "Summarizing the data" is extracted into "tidydataset.txt" by 
+        using the write.table() function
   
   ## 3.2) Codebook: "Codebook.md"
-      A code book that indicates all the variables and summaries calculated, along with units, and any other relevant information
+      A code book that indicates all the variables and summaries calculated, along with units, and any other relevant 
+      information
 
   ## 3.3) Tidy data: "tidydataset.txt"
      This file is the result of the R script "run_analysis.R" as described above.
-     It contains the average of the features that contain a mean or standard deviation from the "Human Activity Recognition Using Smartphones Dataset" per activity and subject.
+     It contains the average of the features that contain a mean or standard deviation from the "Human Activity 
+     Recognition Using Smartphones Dataset" per activity and subject.
      The variables are described in a more detailed way within "Codebook.md"
