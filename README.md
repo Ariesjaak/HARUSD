@@ -33,6 +33,8 @@ In this README script the following is explained:
      for each activity and each subject."
 
 # 2) Original README
+  This is a copy of the original README.txt file, including a reference to the license.
+
       ==================================================================
       Human Activity Recognition Using Smartphones Dataset
       Version 1.0
