@@ -32,7 +32,7 @@ In this README script the following is explained:
   5) From the data set in step 4, creates a second, independent tidy data set with the average of each variable 
      for each activity and each subject."
 
-# 3) Original README
+# 2) Original README
       ==================================================================
       Human Activity Recognition Using Smartphones Dataset
       Version 1.0
