@@ -107,7 +107,6 @@ In this README script the following is explained:
   ## 3.1) R script: "run_analysis.R"
      This file contains the R script used to load, clean, summarize the data and to create the final "Tidy data" 
      extract.
-     The "Codebook.md" file explains the script, variables
      
      It is build up in four phases:
        1) Getting the data
@@ -195,3 +194,4 @@ In this README script the following is explained:
   ## 3.3) Tidy data: "tidydataset.txt"
      This file is the result of the R script "run_analysis.R" as described above.
      It contains the average of the features that contain a mean or standard deviation from the "Human Activity Recognition Using Smartphones Dataset" per activity and subject.
+     The variables are described in a more detailed way within "Codebook.md"
