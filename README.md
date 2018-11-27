@@ -127,34 +127,45 @@ In this README script the following is explained:
         1.2) Loading the data from the provided URL and extract the file into the repository
              Data is loaded from the URL and unzipped.
         1.3) Loading activity names
-             loading the activity_labels.txt into "activitylabels by using read.table() function
+             loading the "activity_labels.txt" into "activitylabels" by using read.table() function
         1.4) Loading feature names
-             loading features.txt into "featurelabels" by using read.table() fucntion
+             loading "features.txt" into "featurelabels" by using read.table() fucntion
         1.5) Loading training data & labels
              loading the following txt files by using read.table() function:
-             X_train.txt loaded into traindata
-             y_train.txt loaded into trainlabels
-             subject_train.txt loadded into trainsubjectID
+             "X_train.txt" loaded into "traindata"
+             "y_train.txt" loaded into "trainlabels"
+             "subject_train.txt" loadded into "trainsubjectID"
         1.6) Loading test data & labels
-             loading the 
+             loading the following txt files by using read.table() function:
+             "X_test.txt" loaded into "testdata"
+             "y_test.txt" loaded into "testlabels"
+             "subject_test.txt" loaded into "testsubjectID"
         1.7) Merging data
-              This covers requirement number 1 from "Required scripts" in the previously described chapter "the Assignement".
-              The train and testdata are merged for:
-              1) data
-              2) labels
-              3) subjectID
+              This covers requirement number 1 from "Required scripts" in the first chapter "the Assignment".
+              The train and testdata are merged into:
+              1) "totaldata", consisting of "traindata" and "testdata"
+              2) "totallabels", consisting of "trainlabels" and "testlabels"
+              3) "totalsubjectID", consisting of "trainsubjectID" and "testsubjectID"
         1.8) Loading specific scope: "only measurements on the mean and standard deviation"
               This covers requirement number 2 from "Required scripts".
-              First the features that consist only measurements on the mean and standard deviation are identified.
-              This is used to create a subset with only those features.
+              First the features that consist only measurements on the mean and standard deviation are identified:
+              
+                  colmean <- grep('-mean()',featurelabels$feature, fixed = TRUE)
+                  colstd <- grep('-std()',featurelabels$feature, fixed = TRUE)
+                  colscoped <- sort(c(colmean, colstd)) 
+                  
+              This is used to create a subset with only those features:
+              
+                scopeddata <- totaldata[,colscoped] # load only the features with mean and standard deviation
+                enricheddata <- cbind(totallabels, totalsubjectID, scopeddata) #enrich this dataset with two columns for activityID and subject.
      
      2) Cleaning the data
         
         In this phase first descriptive names are created for all features including removing and changing characters to 
         make them easier to read.
-        Example: "BodyBody" changed into "Body"
+        Examples: "BodyBody" changed into "Body", removing "()"
         
-        Secondly these descriptive names are asigned to the dataset which also includes loading the description of the activities instead using an Activity ID.
+        Secondly these descriptive names are asigned to the dataset which also includes loading the description of the activities instead using an Activity ID by using the merge() function. The unique link is "activityID" and the dataset "enricheddata" is set as the base dataset by code "all.x = TRUE". It works like this, enricheddata is copied into "final" dataset plus an extra column where the "activity" is loaded from "activitylabels" dataset when the "activityID" matches. 
         
         Steps:
         2.1) Create descriptive names
@@ -162,8 +173,8 @@ In this README script the following is explained:
      
      3) Summarizing the data
         
-        For this step two packages are used: "tidyr" and "dplyr".
-        A "tidy" data set is created by creating a table data frame from the final data from step 2) "Cleaning data"
+        For this step two packages are used: "dplyr" and "tidyr".
+        A "tidy" data set is created by creating a table data frame from the "final" dataset from step 2) "Cleaning data"
         First the data is grouped by "activity" and "subject".
         Secondly, the mean is calculated for each feature per activity and subject
         Thirdly, the data is transposed by using the gather() function to get a dataframe with the following columns:
@@ -184,5 +195,3 @@ In this README script the following is explained:
   ## 3.3) Tidy data: "tidydataset.txt"
      This file is the result of the R script "run_analysis.R" as described above.
      It contains the average of the features that contain a mean or standard deviation from the "Human Activity Recognition Using Smartphones Dataset" per activity and subject.
-  
-  
