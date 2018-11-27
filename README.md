@@ -164,7 +164,12 @@ In this README script the following is explained:
         
         In this phase first descriptive names are created for all features including removing and changing characters to 
         make them easier to read.
-        Examples: "BodyBody" changed into "Body", removing "()"
+        Adjustments made:
+        
+        1) removing "()"
+        2) adjust "BodyBody" to "Body"
+        3) removing "-"
+        4) changing "," into "-"
         
         Secondly these descriptive names are asigned to the dataset which also includes loading the description of the 
         activities instead using an Activity ID by using the merge() function. The unique link is "activityID" and the 
