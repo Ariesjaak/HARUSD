@@ -1,12 +1,12 @@
 # HARUSD
 This repository is created for Coursera course "Getting and Cleaning Data" from Data Science Specialization, by Johns Hopkins University.
 
-In this README script the following is explained:
+## In this README script the following is explained:
   1) The Assignment
   2) The Submitted Files:
-    ##2.1) R script: "run_analysis.R"
-    ##2.2) Codebook: "Codebook.md"
-    ##2.3) Tidy data: "tidydataset.txt"
+    2.1) R script: "run_analysis.R"
+    2.2) Codebook: "Codebook.md"
+    2.3) Tidy data: "tidydataset.txt"
 
 # The Assignment
   The purpose of this project is to demonstrate the ability to collect, work with, and clean a data set.
