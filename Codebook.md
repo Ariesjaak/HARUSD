@@ -3,9 +3,20 @@
   This code book indicates all the variables and summaries calculated, along with units, and any other relevant 
   information for "tidydataset.txt" which is the final result of the R script "run_analysis.R", both part of this
   repository.
+  
+  Chapters:
+  1) Original README description
+  2) Original feature description
+  2) Description of "tidydataset.txt"
 
-  The below is an adjustment of the original "features_info.txt" file from the orginal dataset as described in 
-  the "README.md" in this repository
+  The first two chapters are copied from the original "README.txt" and "features_info.txt" files from the orginal dataset 
+  derived from:
+  https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+  
+  This is done to give a clear overview of the orignal dataset and its variables.
+  Consequently in chapter 3) the variables are explained and summaries calculated for the "tidydataset.txt" where references 
+  are made to the first two chapters.
+
 
     Feature Selection 
     =================
@@ -73,3 +84,5 @@
     tBodyGyroJerkMean
 
     The complete list of variables of each feature vector is available in 'features.txt'
+
+2) 
