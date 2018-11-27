@@ -39,8 +39,10 @@ In this README script the following is explained:
     The phases are described below:
     
     1) Getting the data
+    
+      This phase is used to create a data repository, load the data from the provided URL, unzip the data, load the data in R, merge the data and creating the required scope for only measurements on the mean and standard deviation.
       
-      This phase consists of 8 steps:
+      To make this understandable and clear, the script is split up in 8 steps:
         1.1) Creating a data repository if not already existing
         1.2) Loading the data from the provided URL and extract the file into the repository
         1.3) Loading activity names
@@ -51,6 +53,12 @@ In this README script the following is explained:
               This covers requirement number 1 from "Required scripts" in the previously described chapter "the Assignement"
         1.8) Loading specific scope: "only measurements on the mean and standard deviation"
               This covers requirement number 2 from "Required scripts"
+     
+     2) Cleaning the data
+     
+     3) Summarizing the data
+     
+     4) Creating tidy data set
 
   ## 2.2) Codebook: "Codebook.md"
 
